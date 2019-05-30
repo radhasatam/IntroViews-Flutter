@@ -22,7 +22,7 @@ class Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
-      padding: const EdgeInsets.all(8.0),
+      // padding: const EdgeInsets.all(8.0),
       width: double.infinity,
       color: pageViewModel.pageColor,
       child: new Opacity(
@@ -117,22 +117,10 @@ class _BodyPageTransform extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Transform(
-      //Used for vertical transformation
-      transform:
-          new Matrix4.translationValues(0.0, 30.0 * (1 - percentVisible), 0.0),
-      child: new Padding(
-        padding: const EdgeInsets.only(
-          bottom: 75.0,
-          left: 10.0,
-          right: 10.0,
-        ),
-        child: DefaultTextStyle.merge(
+    return DefaultTextStyle.merge(
           style: pageViewModel.bodyTextStyle,
           textAlign: TextAlign.center,
           child: pageViewModel.body,
-        ),
-      ), //Padding
     );
   }
 }
@@ -171,22 +159,9 @@ class _TitlePageTransform extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Transform(
-      //Used for vertical transformation
-      transform:
-          new Matrix4.translationValues(0.0, 30.0 * (1 - percentVisible), 0.0),
-      child: new Padding(
-        padding: new EdgeInsets.only(
-          top: 5.0,
-          bottom: 30.0,
-          left: 10.0,
-          right: 10.0,
-        ),
-        child: DefaultTextStyle.merge(
-          style: pageViewModel.titleTextStyle,
-          child: pageViewModel.title,
-        ),
-      ), //Padding
+    return new DefaultTextStyle(
+        style: pageViewModel.titleTextStyle,
+        child: pageViewModel.title,
     );
   }
 }
