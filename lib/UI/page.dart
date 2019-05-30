@@ -151,14 +151,9 @@ class _ImagePageTransform extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Transform(
-      //Used for vertical transformation
-      transform:
-          new Matrix4.translationValues(0.0, 50.0 * (1 - percentVisible), 0.0),
-      child: new Container(
-        child: pageViewModel.mainImage, //Loading main
-      ), //Container
-    );
+    return Container(
+      child: pageViewModel.mainImage, //Loading main
+    ); //Container
   }
 }
 
