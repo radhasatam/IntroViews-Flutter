@@ -43,28 +43,18 @@ class Page extends StatelessWidget {
     return new Column(
       mainAxisAlignment: columnMainAxisAlignment,
       mainAxisSize: MainAxisSize.max,
-      children: <Widget>[
-        Flexible(
-          flex: 1,
-          child: new _TitlePageTransform(
+      children: <Widget>[_TitlePageTransform(
             percentVisible: percentVisible,
             pageViewModel: pageViewModel,
           ),
-        ), //Transform
-        Expanded(
-          flex: 4,
-          child: new _ImagePageTransform(
+          _ImagePageTransform(
             percentVisible: percentVisible,
             pageViewModel: pageViewModel,
           ),
-        ), //Transform
-        Flexible(
-          flex: 2,
-          child: new _BodyPageTransform(
+          new _BodyPageTransform(
             percentVisible: percentVisible,
             pageViewModel: pageViewModel,
           ),
-        ), //Transform
       ],
     );
   }
