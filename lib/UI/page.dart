@@ -155,15 +155,9 @@ class _ImagePageTransform extends StatelessWidget {
       //Used for vertical transformation
       transform:
           new Matrix4.translationValues(0.0, 50.0 * (1 - percentVisible), 0.0),
-      child: new Padding(
-        padding: new EdgeInsets.only(
-          top: 20.0,
-          bottom: 40.0,
-        ),
-        child: new Container(
-          child: pageViewModel.mainImage, //Loading main
-        ), //Container
-      ), //Padding
+      child: new Container(
+        child: pageViewModel.mainImage, //Loading main
+      ), //Container
     );
   }
 }
