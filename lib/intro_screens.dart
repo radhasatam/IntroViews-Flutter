@@ -80,7 +80,7 @@ class IntroViewsFlutter extends StatefulWidget {
   final bool doneButtonPersist;
 
   /// [MainAxisAlignment] for [PageViewModel] page column aligment
-  /// default [MainAxisAligment.spaceAround]
+  /// default [MainAxisAligment.center]
   ///
   /// portrait view wraps around  [title] [body] [mainImage]
   ///
@@ -113,7 +113,7 @@ class IntroViewsFlutter extends StatefulWidget {
     this.skipText = const Text("SKIP"),
     this.backText = const Text("BACK"),
     this.doneButtonPersist = false,
-    this.columnMainAxisAlignment = MainAxisAlignment.spaceAround,
+    this.columnMainAxisAlignment = MainAxisAlignment.center,
     this.fullTransition = FULL_TARNSITION_PX,
     this.background,
   }) : super(key: key);
