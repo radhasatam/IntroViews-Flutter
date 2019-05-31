@@ -44,6 +44,7 @@ class Page extends StatelessWidget {
       mainAxisAlignment: columnMainAxisAlignment,
       mainAxisSize: MainAxisSize.max,
       children: <Widget>[
+        Text("FUCK YOU"),
         _ImagePageTransform(
           percentVisible: percentVisible,
           pageViewModel: pageViewModel,
