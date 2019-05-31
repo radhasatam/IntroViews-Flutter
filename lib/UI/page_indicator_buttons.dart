@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:intro_views_flutter/Constants/constants.dart';
-import 'package:intro_views_flutter/Models/page_button_view_model.dart';
+import 'package:intro_screens/Constants/constants.dart';
+import 'package:intro_screens/Models/page_button_view_model.dart';
 
 /// Skip, Next, and Back button class
 

@@ -5,8 +5,8 @@
     <img src="https://img.shields.io/badge/Platform-Flutter-yellow.svg"
       alt="Platform" />
   </a>
-  	<a href="https://pub.dartlang.org/packages/intro_views_flutter">
-    <img src="https://img.shields.io/pub/v/intro_views_flutter.svg"
+  	<a href="https://pub.dartlang.org/packages/intro_screens">
+    <img src="https://img.shields.io/pub/v/intro_screens.svg"
       alt="Pub Package" />
   </a>
   	<a href="https://travis-ci.com/aagarwal1012/IntroViews-Flutter">
@@ -55,18 +55,18 @@ IntroViews is inspired by [Paper Onboarding](https://github.com/Ramotion/paper-o
 
 # Getting Started
 
-You should ensure that you add the `intro_views_flutter` as a dependency in your flutter project.
+You should ensure that you add the `intro_screens` as a dependency in your flutter project.
 
 ```yaml
 dependencies:
-  intro_views_flutter: '^2.6.0'
+  intro_screens: '^2.6.0'
 ```
 
 You can also reference the git repository directly if you want:
 
 ```yaml
 dependencies:
-  intro_views_flutter:
+  intro_screens:
     git: git://github.com/aagarwal1012/IntroViews-Flutter
 ```
 

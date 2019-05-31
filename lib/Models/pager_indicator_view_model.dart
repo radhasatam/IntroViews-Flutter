@@ -1,5 +1,5 @@
-import 'package:intro_views_flutter/Constants/constants.dart';
-import 'package:intro_views_flutter/Models/page_view_model.dart';
+import 'package:intro_screens/Constants/constants.dart';
+import 'package:intro_screens/Models/page_view_model.dart';
 
 //view model for page indicator
 
