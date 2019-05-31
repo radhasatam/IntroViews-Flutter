@@ -16,7 +16,7 @@ class Page extends StatelessWidget {
   Page({
     this.pageViewModel,
     this.percentVisible = 1.0,
-    this.columnMainAxisAlignment = MainAxisAlignment.spaceAround,
+    this.columnMainAxisAlignment = MainAxisAlignment.center,
   });
 
   @override
@@ -43,18 +43,19 @@ class Page extends StatelessWidget {
     return new Column(
       mainAxisAlignment: columnMainAxisAlignment,
       mainAxisSize: MainAxisSize.max,
-      children: <Widget>[_TitlePageTransform(
-            percentVisible: percentVisible,
-            pageViewModel: pageViewModel,
-          ),
-          _ImagePageTransform(
-            percentVisible: percentVisible,
-            pageViewModel: pageViewModel,
-          ),
-          new _BodyPageTransform(
-            percentVisible: percentVisible,
-            pageViewModel: pageViewModel,
-          ),
+      children: <Widget>[
+        _ImagePageTransform(
+          percentVisible: percentVisible,
+          pageViewModel: pageViewModel,
+        ),
+        _TitlePageTransform(
+          percentVisible: percentVisible,
+          pageViewModel: pageViewModel,
+        ),
+        _BodyPageTransform(
+          percentVisible: percentVisible,
+          pageViewModel: pageViewModel,
+        ),
       ],
     );
   }
@@ -108,9 +109,9 @@ class _BodyPageTransform extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTextStyle.merge(
-          style: pageViewModel.bodyTextStyle,
-          textAlign: TextAlign.center,
-          child: pageViewModel.body,
+      style: pageViewModel.bodyTextStyle,
+      textAlign: TextAlign.center,
+      child: pageViewModel.body,
     );
   }
 }
@@ -150,8 +151,8 @@ class _TitlePageTransform extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new DefaultTextStyle(
-        style: pageViewModel.titleTextStyle,
-        child: pageViewModel.title,
+      style: pageViewModel.titleTextStyle,
+      child: pageViewModel.title,
     );
   }
 }
