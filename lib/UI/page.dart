@@ -32,7 +32,7 @@ class Page extends StatelessWidget {
             builder: (BuildContext context, Orientation orientation) {
           return orientation == Orientation.portrait
               ? _buildPortraitPage()
-              : __buildLandscapePage();
+              : _buildPortraitPage();
         }), //OrientationBuilder
       ),
     );
@@ -41,8 +41,6 @@ class Page extends StatelessWidget {
   /// when device is Portrait place title, image and body in a column
   Widget _buildPortraitPage() {
     return new Column(
-      mainAxisAlignment: columnMainAxisAlignment,
-      mainAxisSize: MainAxisSize.max,
       children: <Widget>[
         Text("FUCK YOU"),
         _ImagePageTransform(
